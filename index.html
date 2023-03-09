@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>iPortfolio Bootstrap Template - Index</title>
+  <title>Personal</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -377,7 +377,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="" class="php-email-form submit-form">
+            <form action="https://script.google.com/macros/s/AKfycbyh3MxfcT05WaU8yGvbzVhSKvV-rwKEpbKyG17sa5TK/dev" method="post" class="php-email-form submit-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -459,26 +459,6 @@
 
   <!-- JS Validation -->
   <script src="assets/js/script.js"></script>
-  <script>
-     $(".submit-form").submit((e)=>{
-       e.preventDefault()
-       $.ajax({
-           url:"https://script.google.com/macros/s/AKfycbyh3MxfcT05WaU8yGvbzVhSKvV-rwKEpbKyG17sa5TK/dev",
-           data:$(".submit-form").serialize(),
-           method:"post",
-           success:function (response){
-               alert("Form submitted successfully")
-               window.location.reload()
-               //window.location.href="https://google.com"
-           },
-           error:function (err){
-               alert("Something Error")
-
-           }
-       })
-   })
-  </script>
-
 </body>
 
 </html>
