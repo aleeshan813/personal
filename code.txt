@@ -1,0 +1,69 @@
+<script>
+     function checksubmit()
+    {
+      let checkcondition = true;
+
+      //name Validation
+
+      let name = document.querySelector("#name").value
+      let spacename = name.trim()
+      if(name=="" || spacename=="")
+      {
+        document.querySelector("#error").innerHTML = "Name field is empty !"
+        checkcondition = false
+      }
+
+      let enteredName = /[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/
+      if(!enteredName.test(name))
+      {
+        document.querySelector("#error").innerHTML = "Name should be letters !"
+        checkcondition = false
+      }
+
+      // email validation 
+
+        let email = document.querySelector("#email").value
+        if(email=="")
+        {
+          document.querySelector("#error").innerHTML = "Email field is empty !"
+          checkcondition = false
+        }
+
+        let enteredEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+        if(!enteredEmail.test(email))
+        {
+          document.querySelector("#error").innerHTML = "Invalied Email !"
+          checkcondition = false
+        }
+
+      // subject validation
+        
+        let subject = document.querySelector("#subject").value
+        let spacesubject = subject.trim()
+        if(subject=="" || spacesubject=="")
+        {
+          document.querySelector("#error").innerHTML = "Subject field is important !"
+          checkcondition = false
+        }
+
+      // message validation
+
+        let message = document.querySelector("#message").value
+        let spacemessage = message.trim()
+        if(message=="" || spacemessage=="")
+        {
+          document.querySelector("#error").innerHTML = "Message field is important !"
+          checkcondition = false
+        }
+        if((name=="" || spacename=="") && (email=="") && (subject=="" || spacesubject=="") && (message=="" || spacemessage==""))
+        {
+          document.querySelector("#error").innerHTML = "Please fill all the fields !"
+          document.getElementsByClassName("p-error"). style. color= "red";
+        }
+
+        if(checkcondition == true)
+        {
+          document.querySelector("#error").innerHTML = "Success !"
+        }
+    }
+  </script>
